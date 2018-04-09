@@ -8,49 +8,13 @@
   <meta name="apple-touch-fullscreen" content="yes" />
   <title>后台管理系统</title>
   <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+  <!-- <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" /> -->
 </head>
 <body>
 
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-xl-2">
-
-<!-- 左侧菜单 -->
-<div class="left_box">
-  <p class="top_tit">easyAdmin</p>
-  <dl id="leftMenu">
-    <dt><i class="iconfont icon-app"></i>表单</dt>
-    <dd>
-      <ul>
-        <li><a href="/index.html">常用元素</a></li>
-        <li class="cur"><a href="/example/button.html">按钮</a></li>
-        <li><a href="/example/form.html">表格</a></li>
-        <li><a href="#">翻页</a></li>
-      </ul>
-    </dd>
-    <dt><i class="iconfont icon-browser"></i>页面交互</dt>
-    <dd>
-      <ul>
-        <li><a href="#">弹窗提示</a></li>
-        <li><a href="#">alert/confirm</a></li>
-        <li><a href="/example/modal.html">弹出层</a></li>
-        <li><a href="#">页面</a></li>
-        <li><a href="#">页面</a></li>
-        <li><a href="#">页面</a></li>
-        <li><a href="#">页面</a></li>
-        <li><a href="#">页面</a></li>
-      </ul>
-    </dd>
-  </dl>
-
-</div>
-
-    </div>
-    <div class="col-xl-10">
-
-
 <!-- 顶部导航 -->
 <div class="top_box">
+  <p class="top_tit">easyAdmin</p>
   <p class="top_menu">
     <a href="#">公众号</a>
     <a href="#" class="cur">小程序</a>
@@ -61,6 +25,38 @@
     欢迎登录：admin <a href="javascript:;">退出</a>
   </p>
 </div>
-asdfasdf
 
+<div class="main_box" id="mainBox">
 
+  <!-- 左侧菜单 -->
+  <div class="left_box">
+
+    <dl id="leftMenu">
+      <dt><i class="iconfont icon-app"></i>表单</dt>
+      <dd>
+        <ul class="list-unstyled">
+          <li><a href="/index.html">常用元素</a></li>
+          <li class="cur"><a href="/example/button.html">按钮</a></li>
+          <li><a href="/example/form.html">表格</a></li>
+          <li><a href="#">翻页</a></li>
+        </ul>
+      </dd>
+      <dt><i class="iconfont icon-browser"></i>页面交互</dt>
+      <dd>
+        <ul class="list-unstyled">
+          <li><a href="#">弹窗提示</a></li>
+          <li><a href="#">alert/confirm</a></li>
+          <li><a href="/example/modal.html">弹出层</a></li>
+          <li><a href="#">页面</a></li>
+          <li><a href="#">页面</a></li>
+          <li><a href="#">页面</a></li>
+          <li><a href="#">页面</a></li>
+          <li><a href="#">页面</a></li>
+        </ul>
+      </dd>
+    </dl>
+
+  </div>
+
+  <!-- 主体内容 -->
+  <div class="right_box">

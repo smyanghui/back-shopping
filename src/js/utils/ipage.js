@@ -23,7 +23,7 @@ class Ipage {
     if(this.options.pageTotal < 2) return;
     if(!this.options.dom) return;
 
-    this.container = $('<ul class="ui_ipage">');
+    this.container = $('<ul class="ui_ipage list-inline">');
     $(this.options.dom).html(this.container);
 
     this.index = parseInt(this.options.currentPage);

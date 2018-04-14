@@ -38,7 +38,7 @@
           <li><a href="/index.html">常用元素</a></li>
           <li class="cur"><a href="/example/button.html">按钮</a></li>
           <li><a href="/example/form.html">表格</a></li>
-          <li><a href="#">翻页</a></li>
+          <li><a href="/example/modal.html">弹窗</a></li>
         </ul>
       </dd>
       <dt><i class="iconfont icon-browser"></i>页面交互</dt>

@@ -56,7 +56,8 @@ $leftBgLine: #d7d7d7;
 }
 
 // 面包屑
-.crumbs {
-  background-color: #fafafa; line-height: 35px;
-  a { margin: 0 10px;}
+.breadcrumb {
+  border-radius: 0;
 }
+
+

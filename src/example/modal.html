@@ -1,34 +1,30 @@
 ${require('../head.tpl')}
 
 <!-- 面包屑 -->
-<p class="crumbs">
-  <a href="index.html">首页</a>/
-  <a href="javascript:;">演示</a>/
-  <a href="javascript:;">按钮元素</a>
-</p>
+<ol class="breadcrumb">
+  <li><a href="/">首页</a></li>
+  <li><a href="javascript:;">演示</a></li>
+  <li class="active">弹窗</li>
+</ol>
 
 <!-- 页面内容 -->
-<div class="content">
+<div class="container-fluid">
 
-  <h2>按钮样式</h2><br />
-  <button class="btn blue"><i class="iconfont icon-app"></i>点击弹窗</button>
-  <br /><br />
-  <button class="btn red"><i class="iconfont icon-app"></i>删除</button>
-  <br /><br />
+  <button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal">Button</button>
 
-
-
-  <div class="ui_modal">
-    <div class="ui_modal_box">
-      <div class="ui_modal_content">
-        <div class="modal_header">
-          adfasdfasdfas
+  <div class="modal fade" id="myModal" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title">Modal title</h4>
         </div>
-        <div class="modal_body">
-          adfadsfasd
+        <div class="modal-body">
+          <p>One fine body&hellip;</p>
         </div>
-        <div class="modal_footer">
-          adfadsfasd
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
         </div>
       </div>
     </div>

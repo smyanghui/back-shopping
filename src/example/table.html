@@ -1,0 +1,113 @@
+${require('../head.tpl')}
+
+<!-- 面包屑 -->
+<ol class="breadcrumb">
+  <li><a href="/"><span class="glyphicon glyphicon-home"></span> 首页</a></li>
+  <li><a href="javascript:;">演示</a></li>
+  <li class="active">表格</li>
+</ol>
+
+<div class="container-fluid">
+
+  <h2>表格样式</h2><br />
+
+  <div class="alert alert-danger" role="alert">
+    <span class="glyphicon glyphicon-exclamation-sign"></span>
+    <span class="sr-only">Error:</span>
+    Enter a valid email address<span class="caret"></span>
+  </div>
+
+  <span class="label label-default">Default</span>
+  <span class="label label-primary">Primary</span>
+  <span class="label label-success">Success</span>
+  <span class="label label-info">Info</span>
+  <span class="label label-warning">Warning</span>
+  <span class="label label-danger">Danger</span>
+
+  <div class="alert alert-warning alert-dismissible" role="alert">
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    <strong>Warning!</strong> Better check yourself, you're not looking too good.
+  </div>
+
+  <!-- 
+    <table class="table table-bordered"> 带边框
+    <table class="table table-hover"> 鼠标悬停
+    <table class="table table-condensed"> 紧缩表格
+
+    <tr class="active">...</tr>
+    <tr class="success">...</tr>
+    <tr class="warning">...</tr>
+    <tr class="danger">...</tr>
+    <tr class="info">...</tr>
+  -->
+  <table class="table table-striped">
+    <tr>
+      <th width="30"><input type="checkbox" name="list" value="" /></th>
+      <th width="200">投保单号</th>
+      <th width="200">保单号</th>
+      <th width="200">销售机构</th>
+      <th>投保单位</th>
+    </tr> 
+    <tr>
+      <td><input type="checkbox" name="list" value="" /></td>
+      <td><a href="#">HL0100001076012491</a></td>
+      <td>HL1100000676004421</td>
+      <td>HL0100001076012491</td>
+      <td>HL1100000676004421</td>
+    </tr>
+    <tr class="success">
+      <td><input type="checkbox" name="list" value="" /></td>
+      <td><a href="#">HL0100001076012491</a></td>
+      <td>HL1100000676004421</td>
+      <td>HL0100001076012491</td>
+      <td>HL1100000676004421</td>
+    </tr>
+    <tr>
+      <td><input type="checkbox" name="list" value="" /></td>
+      <td><a href="#">HL0100001076012491</a></td>
+      <td>HL1100000676004421</td>
+      <td>HL0100001076012491</td>
+      <td>HL1100000676004421</td>
+    </tr>
+  </table>
+  <div class="page_box" id="tablePageBox"></div>
+
+  <h2>表格样式</h2><br />
+  <table class="table table-bordered">
+    <tr>
+      <th width="30">
+        <input type="checkbox" name="" value="" />
+      </th>
+      <th>ID</th>
+      <th>ID</th>
+    </tr> 
+    <tr>
+      <td>
+        <input type="checkbox" value="" name="" />
+      </td>
+      <td>行业动态</td>
+      <td>H-ui</td>
+    </tr>
+  </table>
+
+  <p>将任何 .table 元素包裹在 .table-responsive 元素内，即可创建响应式表格</p>
+
+  <h2>文本对齐</h2><br />
+  <p class="text-left">Left aligned text.</p>
+  <p class="text-center">Center aligned text.</p>
+  <p class="text-right">Right aligned text.</p>
+  <p class="text-justify">Justified text.</p>
+  <p class="text-nowrap">No wrap text.</p>
+
+  <h2>水平排列</h2><br />
+
+  <dl class="dl-horizontal">
+    <dt>...</dt>
+    <dd>...</dd>
+  </dl>
+
+
+  
+
+</div>
+${require('../foot.tpl')}

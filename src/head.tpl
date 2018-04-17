@@ -32,12 +32,13 @@
   <div class="left_box">
 
     <dl id="leftMenu">
-      <dt><i class="iconfont icon-app"></i>表单</dt>
+      <dt><span class="glyphicon glyphicon-eye-open"></span> Bootstrap演示</dt>
       <dd>
         <ul class="list-unstyled">
           <li><a href="/index.html">常用元素</a></li>
           <li class="cur"><a href="/example/button.html">按钮</a></li>
-          <li><a href="/example/form.html">表格</a></li>
+          <li><a href="/example/form.html">表单</a></li>
+          <li><a href="/example/table.html">表格</a></li>
           <li><a href="/example/modal.html">弹窗</a></li>
         </ul>
       </dd>

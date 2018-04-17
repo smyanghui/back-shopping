@@ -6,7 +6,7 @@
   <meta name="format-detection" content="telephone=no, email=no" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-touch-fullscreen" content="yes" />
-  <title>后台管理系统</title>
+  <title>单店管理系统</title>
   <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" />
   <!-- <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" /> -->
 </head>
@@ -14,12 +14,11 @@
 
 <!-- 顶部导航 -->
 <div class="top_box">
-  <p class="top_tit">easyAdmin</p>
+  <p class="top_tit"><span class="glyphicon glyphicon-fire"></span> 单店管理</p>
   <p class="top_menu">
-    <a href="#">公众号</a>
-    <a href="#" class="cur">小程序</a>
-    <a href="#">商城</a>
-    <a href="#">配置</a>
+    <a href="#" class="cur">商品管理</a>
+    <a href="#">订单管理</a>
+    <a href="#">Bootstrap演示</a>
   </p>
   <p class="top_right">
     欢迎登录：admin <a href="javascript:;">退出</a>
@@ -30,8 +29,7 @@
 
   <!-- 左侧菜单 -->
   <div class="left_box">
-
-    <dl id="leftMenu">
+    <dl>
       <dt><span class="glyphicon glyphicon-eye-open"></span> Bootstrap演示</dt>
       <dd>
         <ul class="list-unstyled">
@@ -42,6 +40,8 @@
           <li><a href="/example/modal.html">弹窗</a></li>
         </ul>
       </dd>
+    </dl>
+    <dl>
       <dt><i class="iconfont icon-browser"></i>页面交互</dt>
       <dd>
         <ul class="list-unstyled">
@@ -56,7 +56,6 @@
         </ul>
       </dd>
     </dl>
-
   </div>
 
   <!-- 主体内容 -->

@@ -1,5 +1,5 @@
 # easyAdmin
-- 基于webpack+es6+jquery
+- 基于webpack+es6+bootstrap
 - 一个简单的后台管理前端框架
 
 ## 安装使用

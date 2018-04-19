@@ -11,8 +11,8 @@ $leftBgLine: #d7d7d7;
   background-color: #333; color: #fff; display: flex;
 
   .top_tit {
-    width: $leftWidth; font-size: 24px;
-    text-align: center; color: $red; background-color: $leftBgCorlor; border-bottom: 1px solid $leftBgLine;
+    width: $leftWidth; height: 45px; font-size: 24px;
+    text-align: center; color: $red; background-color: $leftBgCorlor;
   }
   .top_menu {
     flex: 1;
@@ -36,7 +36,7 @@ $leftBgLine: #d7d7d7;
 
   // 左侧导航
   .left_box {
-    width: $leftWidth; background-color: $leftBgCorlor; color: #fff;
+    width: $leftWidth; background-color: $leftBgCorlor; color: #fff; border-top: 1px solid $leftBgLine;
     dt {
       cursor: pointer; line-height: 45px;
       padding-left: 15px; border-bottom: 1px solid $leftBgLine;

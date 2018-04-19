@@ -1,5 +1,4 @@
-// import Validate from './utils/validate.js';
-import {MENUTOP, MENULEFT} from './menu.js';
+import {menuTop, menuLeft} from './menu.js';
 import Controller from './utils/controller.js';
 
 class Main extends Controller {
@@ -20,8 +19,6 @@ class Main extends Controller {
 
   // 渲染菜单
   renderMenu() {
-    const menuTop = MENUTOP;
-    const menuLeft = MENULEFT;
     const pathName = window.location.pathname;
 
     let num = '10';
@@ -43,7 +40,7 @@ class Main extends Controller {
 
     let menuTopHTML = '';
     for (let i in menuTop) {
-      menuTopHTML += `<a href="javascript:;"${menuTop[i].num == num ? ' class="cur"' : ''}>${menuTop[i].text}</a>`;
+      menuTopHTML += `<a href="${menuTop[i].url}"${menuTop[i].num == num ? ' class="cur"' : ''}>${menuTop[i].text}</a>`;
     }
     $("#topMenu").html(menuTopHTML);
 

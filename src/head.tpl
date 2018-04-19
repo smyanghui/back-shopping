@@ -15,11 +15,7 @@
 <!-- 顶部导航 -->
 <div class="top_box">
   <p class="top_tit"><span class="glyphicon glyphicon-fire"></span> 单店管理</p>
-  <p class="top_menu" id="topMenu">
-    <a href="#" class="cur">商品管理</a>
-    <a href="#">订单管理</a>
-    <a href="#">Bootstrap演示</a>
-  </p>
+  <p class="top_menu" id="topMenu"></p>
   <p class="top_right">
     欢迎登录：admin <a href="javascript:;">退出</a>
   </p>
@@ -29,18 +25,7 @@
 
   <!-- 左侧菜单 -->
   <div class="left_box">
-    <dl id="leftBox">
-      <dt><span class="glyphicon glyphicon-eye-open"></span> Bootstrap演示</dt>
-      <dd>
-        <ul class="list-unstyled">
-          <li><a href="/index.html">常用元素</a></li>
-          <li class="cur"><a href="/example/button.html">按钮</a></li>
-          <li><a href="/example/form.html">表单</a></li>
-          <li><a href="/example/table.html">表格</a></li>
-          <li><a href="/example/modal.html">弹窗</a></li>
-        </ul>
-      </dd>
-    </dl>
+    <dl id="leftBox"></dl>
   </div>
 
   <!-- 主体内容 -->

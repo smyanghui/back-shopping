@@ -1,5 +1,7 @@
 @charset "utf-8";
-@import "./config.scss";
+$leftWidth: 200px;
+$red: #dd514c;
+$blur: #1b83f8;
 $leftBgCorlor: #394a59;
 $leftBgLine: #d7d7d7;
 
@@ -34,30 +36,18 @@ $leftBgLine: #d7d7d7;
 
   // 左侧导航
   .left_box {
-    width: $leftWidth; background-color: $leftBgCorlor;
-     color: #fff;
+    width: $leftWidth; background-color: $leftBgCorlor; color: #fff;
     dt {
       cursor: pointer; line-height: 45px;
       padding-left: 15px; border-bottom: 1px solid $leftBgLine;
-      i { margin-right: 5px;}
     }
-    dd {}
-    ul { line-height: 40px;}
-    li { padding-left: 35px; border-bottom: 1px solid $leftBgLine;}
-    li a { color: #fff; display: block;}
-    li:hover { background-color: #2e3b46;}
+    dd { line-height: 40px; border-bottom: 1px solid $leftBgLine;}
+    a { color: #fff; display: block; padding-left: 35px;}
+    a:hover, a.cur { background-color: #2e3b46;}
   }
 
   // 右侧
   .right_box {
     flex: 1; background-color: #fff;
-    // .content { padding: 10px; width: 100%;}
   }
 }
-
-// 面包屑
-.breadcrumb {
-  border-radius: 0;
-}
-
-

@@ -15,7 +15,7 @@
 <!-- 顶部导航 -->
 <div class="top_box">
   <p class="top_tit"><span class="glyphicon glyphicon-fire"></span> 单店管理</p>
-  <p class="top_menu">
+  <p class="top_menu" id="topMenu">
     <a href="#" class="cur">商品管理</a>
     <a href="#">订单管理</a>
     <a href="#">Bootstrap演示</a>
@@ -29,7 +29,7 @@
 
   <!-- 左侧菜单 -->
   <div class="left_box">
-    <dl>
+    <dl id="leftBox">
       <dt><span class="glyphicon glyphicon-eye-open"></span> Bootstrap演示</dt>
       <dd>
         <ul class="list-unstyled">
@@ -38,21 +38,6 @@
           <li><a href="/example/form.html">表单</a></li>
           <li><a href="/example/table.html">表格</a></li>
           <li><a href="/example/modal.html">弹窗</a></li>
-        </ul>
-      </dd>
-    </dl>
-    <dl>
-      <dt><i class="iconfont icon-browser"></i>页面交互</dt>
-      <dd>
-        <ul class="list-unstyled">
-          <li><a href="#">弹窗提示</a></li>
-          <li><a href="#">alert/confirm</a></li>
-          <li><a href="/example/modal.html">弹出层</a></li>
-          <li><a href="#">页面</a></li>
-          <li><a href="#">页面</a></li>
-          <li><a href="#">页面</a></li>
-          <li><a href="#">页面</a></li>
-          <li><a href="#">页面</a></li>
         </ul>
       </dd>
     </dl>

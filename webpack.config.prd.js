@@ -9,7 +9,7 @@ for (var i in config.entry) {
     filename: i + '.html',
     minify: {
       removeComments: true, // 移除HTML中的注释
-      collapseWhitespace: false // 删除空白符与换行符
+      collapseWhitespace: true // 删除空白符与换行符
     },
     chunks: ['common', i]
     // publicPath: config.output.publicPath
@@ -17,10 +17,10 @@ for (var i in config.entry) {
 }
 
 // 压缩js
-// config.plugins.push(
-//   new webpack.optimize.UglifyJsPlugin({
-//     compress: { warnings: false }
-//   })
-// );
+config.plugins.push(
+  new webpack.optimize.UglifyJsPlugin({
+    compress: { warnings: false } // 是否警告
+  })
+);
 
 module.exports = config;

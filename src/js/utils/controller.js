@@ -1,50 +1,6 @@
-
 class Controller {
 
   constructor() {}
-
-  // 加载效果
-  // static showLoading(msg) {
-  //  newLoading.show();
-  // }
-  // static hideLoading() {
-  //  newLoading.hide();
-  // }
-
-  // 提示信息
-  // static showMessage(msg) {
-  //  newTips.show(msg, 1);
-  // }
-  // static hideMessage() {
-  //  newTips.hide();
-  // }
-
-  // static tips(msg, mType = 'warning', t = 3) {
-  //   tips.show(msg, mType, t);
-  // }
-
-  // 定时提示
-  // static showToast(msg) {
-  //  newTips.show(msg, 0);
-  // }
-  // static hideToast() {
-  //  newTips.hide();
-  // }
-
-  // static loadingShow() {
-  //   loading.show();
-  // }
-
-  // // 加载效果
-  // static showLoading(...data) {
-  //  if (!this.loading) {
-  //    this.loading = new Loading();
-  //  }
-  //  this.loading.show(...data);
-  // }
-  // static hideLoading() {
-  //  if (this.loading) this.loading.hide();
-  // }
 
   // // 提示信息
   // static showMessage(...data) {
@@ -57,18 +13,6 @@ class Controller {
   //  this.message.hide();
   // }
 
-  // // 定时提示
-  // static showToast(...data) {
-  //  if (!this.Toast) {
-  //    this.Toast = new Toast();
-  //  }
-  //  this.Toast.show(...data);
-  // }
-
-  // static hideToast() {
-  //  this.Toast.hide();
-  // }
-
   // 获取表单值
   static getFormData(selector) {
     selector = selector || 'input, select, textarea';
@@ -79,20 +23,83 @@ class Controller {
     return data;
   }
 
-  // ajax
-  static ajax(options, success, error) {
-
+  // ajax封装
+  static ajax(options, success) {
+    Controller.showLoading();
     options.success = options.success || function(data) {
-      console.log(data);
-      // if (parseInt(data.code) >= 20000) {
-      // } else {}
+      Controller.hideLoading();
+      if (data.code == 0) {
+        success(data);
+      } else {
+        if (data.code == 100008) {
+          // Controller.showMessage('登录超时，请重新登录！');
+          window.location.href = '/login.html';
+        } else {
+          Controller.showMessage(data.msg);
+        }
+      }
     }
-
     options.error = options.error || function(data) {
-      console.log(data);
+      Controller.hideLoading();
+      Controller.showMessage('网络异常，请稍后重试');
     }
+    options.url = 'http://devapi.nfangbian.com' + options.url;
 
     $.ajax(options);
+  }
+
+  // 获取cookie
+  static getCookie(name) {
+    let r = new RegExp("(^|;|\\s+)" + name + "=([^;]*)(;|$)");
+    let m = document.cookie.match(r);
+    return (!m ? "" : decodeURIComponent(m[2]));
+  }
+
+  // 设置cookie
+  static setCookie(name, v, path, expire, domain) {
+    let s = name + "=" + encodeURIComponent(v) + "; path=" + (path || '/') + (domain ? ("; domain=" + domain) : '');
+    if (expire > 0) {
+      let d = new Date();
+      d.setTime(d.getTime() + expire * 1000);
+      s += ";expires=" + d.toGMTString();
+    }
+    document.cookie = s;
+  }
+
+  // 删除cookie
+  static delCookie(name, path, domain) {
+    if (arguments.length == 2) {
+      domain = path;
+      path = "/";
+    }
+    document.cookie = name + "=;path=" + path + ";" + (domain ? ("domain=" + domain + ";") : '') + "expires=Thu, 01-Jan-70 00:00:01 GMT";
+  }
+
+  // 登录用户调用
+  static isLogin(success, nologin) {
+    const Token = this.getCookie('token');
+    this.ajax({
+      url: `/check/token?token=${Token}`,
+      type: 'GET',
+    }, (res) => {
+      if (res.data.islogin == 1) {
+        window.Token = Token;
+        success && success();
+      } else {
+        window.Token = '';
+        nologin && nologin();
+      }
+    });
+  }
+
+  // 格式化金额(分转元)
+  static formatMoney(val) {
+    let rVal = parseInt(val);
+    if (!rVal || rVal <= 0) return '0.00';
+    let sVal = String(rVal);
+    if (sVal.length == 1) sVal = '00'+ sVal;
+    if (sVal.length == 2) sVal = '0'+ sVal;
+    return sVal.replace(/(\d+)(\d{2})$/, '$1.$2');
   }
 
   // 获取url指定参数的值
@@ -105,7 +112,6 @@ class Controller {
     let params = {};
 
     if(location.search.length == 0) return params;
-
 
     let keyValPairs = location.search.substr(1).split('&'),
       tempArr;

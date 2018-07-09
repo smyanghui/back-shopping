@@ -6,10 +6,13 @@ var config = {
 
   entry: {
     'index': ['./src/css/index.css'],
-    'example/form': ['./src/js/example/example.js', './src/css/example/example.scss'],
-    'example/button': ['./src/css/example/example.scss'],
-    'example/table': ['./src/css/example/example.scss'],
-    'example/modal': ['./src/css/example/example.scss'],
+    'item/index': ['./src/css/index.css', './src/js/item/index.js'],
+    'item/sort': ['./src/css/index.css'],
+    'item/spec': ['./src/css/index.css'],
+    'example/form': ['./src/js/example/example.js'],
+    'example/button': ['./src/css/index.css'],
+    'example/table': ['./src/css/index.css'],
+    'example/modal': ['./src/css/index.css'],
     'common': ['./src/js/main.js', './src/css/common/index.scss']
   },
 

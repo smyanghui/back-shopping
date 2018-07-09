@@ -1,18 +1,34 @@
 import Controller from './utils/controller.js';
 
 let menuTop = [
-  {num: '10', text: '商品管理', url: '/example/button.html'},
-  {num: '11', text: '订单管理', url: '/example/button.html'},
+  {num: '10', text: '商品管理', url: '/item/index.html'},
+  {num: '11', text: '订单管理', url: '/order/index.html'},
+  {num: '12', text: '用户中心', url: '/example/button.html'},
+  {num: '13', text: '文章中心', url: '/example/button.html'},
+  {num: '14', text: '控制面板', url: '/example/button.html'},
 ];
 
 let menuLeft = {
   '10': [
-    {text: '二级菜单12', url: null},
-    {text: '页面12', url: '/cc/asd1'},
-    {text: '页面22', url: '/cc/asd2'},
-    {text: '二级菜单22', url: null},
-    {text: '页面12', url: '/cc/asd3'},
-    {text: '页面22', url: '/cc/asd4'},
+    {text: '商品列表', url: '/item/index.html'},
+    {text: '商品分类', url: '/item/sort.html'},
+    {text: '规格设置', url: '/item/spec.html'},
+  ],
+  '11': [
+    {text: '订单列表', url: '/cc/asd1'},
+  ],
+  '12': [
+    {text: '会员列表', url: '/cc/asd1'},
+  ],
+  '13': [
+    {text: '文章分类', url: '/cc/asd1'},
+    {text: '文章列表', url: '/cc/asd1'},
+    {text: '活动单页', url: '/cc/asd1'},
+  ],
+  '14': [
+    {text: '网站设置', url: '/cc/asd1'},
+    {text: '支付设置', url: '/cc/asd1'},
+    {text: '密码修改', url: '/cc/asd1'},
   ],
 };
 

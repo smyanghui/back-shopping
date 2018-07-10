@@ -2,17 +2,6 @@ class Controller {
 
   constructor() {}
 
-  // // 提示信息
-  // static showMessage(...data) {
-  //  if (!this.message) {
-  //    this.message = new Message();
-  //  }
-  //  this.message.show(...data);
-  // }
-  // static hideMessage() {
-  //  this.message.hide();
-  // }
-
   // 获取表单值
   static getFormData(selector) {
     selector = selector || 'input, select, textarea';

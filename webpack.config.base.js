@@ -6,6 +6,7 @@ var config = {
 
   entry: {
     'index': ['./src/css/index.css'],
+    'login': ['./src/css/login.scss', './src/js/login.js'],
     'item/index': ['./src/css/index.css', './src/js/item/index.js'],
     'item/sort': ['./src/css/index.css'],
     'item/spec': ['./src/css/index.css'],

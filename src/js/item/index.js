@@ -17,11 +17,18 @@ class Page extends Controller {
   }
 
   init() {
-    //AA
+    this.tablePage = null;
+    Controller.isLogin(() => {
+      // this.rCart();
+    });
   }
 
   bindEvent() {
-    //const _this = this;
+    const _this = this;
+    $("#addBtn").on("click", () => {
+      // vueData.message = 'ccc';
+      $("#addModal").modal('show');
+    })
   }
 
   // 获取用户信息
@@ -39,8 +46,7 @@ class Page extends Controller {
   }
 
   asdf () {
-    let myPage = null;
-    myPage = new Ipage({
+    this.tablePage = new Ipage({
       'dom': "#tablePageBox",
       'pageTotal': 5,
       'perPage': 10,

@@ -1,4 +1,12 @@
 </div></div>
+<div class="modal fade" id="messagesBox">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-body" id="messagesTxt"></div>
+    </div>
+  </div>
+</div>
+<div class="modal ui-loading" data-backdrop="static" id="loadingBox"></div>
 <script>
 var H=window.innerHeight||document.documentElement.clientHeight;
 document.getElementById("mainBox").style.height=(H-45)+"px";

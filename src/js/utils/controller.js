@@ -2,6 +2,23 @@ class Controller {
 
   constructor() {}
 
+  // 提示框
+  static showMessage(val, iserr = 0) {
+    let icon = iserr ? 'ok color-success' : 'remove color-error';
+    $("#messagesTxt").html(`<span class="glyphicon glyphicon-${icon}"></span>${val}`);
+    $("#messagesBox").modal('show');
+  }
+
+  // 显示加载
+  static showLoading() {
+    $("#loadingBox").modal('show');
+  }
+
+  // 隐藏加载
+  static hideLoading() {
+    $("#loadingBox").modal('hide');
+  }
+
   // 获取表单值
   static getFormData(selector) {
     selector = selector || 'input, select, textarea';
@@ -65,10 +82,10 @@ class Controller {
   }
 
   // 登录用户调用
-  static isLogin(success, nologin) {
+  static isLogin(success) {
     const Token = this.getCookie('token');
     this.ajax({
-      url: `/check/token?token=${Token}`,
+      url: `/admin/index/checktoken?token=${Token}`,
       type: 'GET',
     }, (res) => {
       if (res.data.islogin == 1) {
@@ -76,7 +93,7 @@ class Controller {
         success && success();
       } else {
         window.Token = '';
-        nologin && nologin();
+        window.location.href = '/login.html';
       }
     });
   }

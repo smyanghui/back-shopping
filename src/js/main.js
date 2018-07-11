@@ -56,6 +56,7 @@ class Main extends Controller {
     $("#leftBox").html(menuLeftHTML);
   }
 
+
 }
 
 new Main();

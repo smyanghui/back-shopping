@@ -11,6 +11,9 @@ class Main extends Controller {
 
   init() {
     this.renderMenu();
+    const nickname = Controller.getCookie('nickname') || '';
+    $("#nickname").text(nickname);
+    $("#outLogin").click( () => this.outLogin() );
   }
 
   bindEvent() {
@@ -56,6 +59,18 @@ class Main extends Controller {
     $("#leftBox").html(menuLeftHTML);
   }
 
+  // 退出登录
+  outLogin() {
+    Controller.ajax({
+      url: '/admin/logout/index',
+      type: 'POST',
+      data: { token: window.Token }
+    }, (res) => {
+      // Controller.setCookie('token', '');
+      // Controller.setCookie('nickname', '');
+      window.location.href = '/login.html';
+    });
+  }
 
 }
 

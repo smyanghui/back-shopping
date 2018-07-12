@@ -17,7 +17,7 @@
   <p class="top_tit"><span class="glyphicon glyphicon-fire"></span> 单店管理</p>
   <p class="top_menu" id="topMenu"></p>
   <p class="top_right">
-    欢迎登录：admin <a href="javascript:;">退出</a>
+    你好！<span id="nickname"></span> <a href="javascript:;" id="outLogin">退出</a>
   </p>
 </div>
 

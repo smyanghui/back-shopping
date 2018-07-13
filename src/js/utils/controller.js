@@ -92,7 +92,6 @@ class Controller {
         window.Token = Token;
         success && success();
       } else {
-        window.Token = '';
         window.location.href = '/login.html';
       }
     });

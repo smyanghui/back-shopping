@@ -2,18 +2,19 @@
 import Controller from '../utils/controller';
 import Ipage from '../utils/ipage';
 
-// new Ipage({
-//   'dom': "#tablePageBox",
-//   'pageTotal': 5,
-//   'perPage': 10,
-//   'currentPage': 1,
-//   'callback': num => {
-//     console.log(num);
-//   }
-// });
+let newIpage = null;
+function initIpage(pagedata = {}) {
+  const basePage = {
+    dom: '#tablePageBox',
+    pageTotal: 0,
+    perPage: 10,
+    currentPage: 1,
+    callback: num => {}
+  }
+  newIpage = new Ipage(Object.assign(basePage, pagedata));
+}
 
-// let newPage = new Page();
-new Vue({
+let newVue = new Vue({
 
   el: '#page',
 
@@ -68,21 +69,24 @@ new Vue({
     },
 
     // 查询列表
-    rList: function() {
+    rList: function(pagenum) {
       Controller.ajax({
         url: '/admin/category/list',
         type: 'POST',
         data: {
           token: window.Token,
-          pid: '', // 上级分类Id
-          // perpage: 10,
-          page: 1,
+          pid: '1',
+          page: pagenum || 1,
         },
       }, (res) => {
         this.lists = res.data && res.data.items || [];
+        // 翻页
+        if (!newIpage) initIpage({ pageTotal: 10, callback: num => this.rList(num) });
       });
     }
 
   }
 
 });
+
+
